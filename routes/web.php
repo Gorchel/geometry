@@ -41,7 +41,7 @@ $router->get('/webhook_sheet_population', ['uses' => 'WebhookSheetController@upd
 $router->get('/copy_property', ['uses' => 'PropertyCopyController@index']);
 $router->post('/copy_property', ['uses' => 'PropertyCopyController@copyProperty']);
 
-$router->get('/webhook/blanks', ['uses' => 'WebhookBlanksController@generate']);
+Route::get('/webhook/blanks', 'WebhookBlanksController@generate');
 $router->get('/webhook/blanks/{id}/{template}', ['uses' => 'WebhookBlanksController@getTemplate']);
 $router->get('/kp/{link}', ['uses' => 'WebhookBlanksController@getTemplateByName']);
 $router->post('/webhook/blanks-downloads/pdf', ['uses' => 'WebhookBlanksController@pdfDownload']);
